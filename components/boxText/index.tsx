@@ -49,7 +49,7 @@ export const BoxText = () => {
        }
       </section>
       <Button 
-        className="disabled:hover:bg-black disabled🇦🇫 disebled:hover:text-white" 
+        className="disabled:hover:bg-black disebled:hover:text-white" 
         variant={"outline"} 
         disabled={!text} 
         onClick={() => copytext(text)}
