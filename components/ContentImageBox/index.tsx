@@ -34,7 +34,7 @@ export const ContentImageBox = ({
       <p className="text-center leading-relaxed">
         Arraste a imagem pra cá...
         <br />
-        ou clique no botão para adicionar a foto"
+        ou clique no botão para adicionar a foto
       </p>
       <Button type="button" onClick={handlePutFile} variant={"secondary"}>
         Adicionar arquivo
