@@ -1,3 +1,4 @@
+import { useFetch } from "@/providers/FetchProvider";
 import { useText } from "@/providers/textProvider";
 import { FormEvent, ReactNode } from "react";
 
@@ -8,19 +9,15 @@ type FormProps = {
 
 export const Form = ({ imageFile, children }: FormProps) => {
   const { setText } = useText();
+  const { postData } = useFetch();
   async function handleSubmitImage(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const formData = new FormData();
     formData.append("file", imageFile);
-
+    
     try {
-      const response = await fetch("http://localhost:3333/image", {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
+      const data = await postData(formData)
       setText(data);
     } catch (err) {
       console.log(err);
@@ -29,7 +26,7 @@ export const Form = ({ imageFile, children }: FormProps) => {
 
   return (
     <form
-      className="flex flex-col w-[45%]"
+      className="flex flex-col w-full"
       onSubmit={(e) => handleSubmitImage(e)}
     >
       {children}

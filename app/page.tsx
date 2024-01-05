@@ -11,7 +11,7 @@ export default function Home() {
         <header className="flex w-full items-center justify-center h-20 text-2xl">
           <h1>Extraia o texto de uma imagem </h1> <Wand2 className="ml-4" />
         </header>
-        <div className="w-[1216px] flex justify-center mx-auto gap-4 flex-wrap">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 w-[clamp(480px,80%,1216px)] mx-auto gap-4">
           <BoxImage />
           <BoxText />
         </div>
