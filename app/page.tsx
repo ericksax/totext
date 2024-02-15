@@ -9,9 +9,9 @@ export default function Home() {
     <SubmitProvider>
       <main className="p-4 flex w-full flex-col">
         <header className="flex w-full items-center justify-center h-20 text-2xl">
-          <h1>Extraia o texto de uma imagem </h1> <Wand2 className="ml-4" />
+          <h1 className="text-[clamp(.8rem,3vw,2rem)]">Extraia o texto de uma imagem </h1> <Wand2 className="ml-4" />
         </header>
-        <div className="grid lg:grid-cols-2 md:grid-cols-1 w-[clamp(480px,80%,1216px)] mx-auto gap-4">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 w-[clamp(240px,80%,1216px)] mx-auto  gap-4">
           <BoxImage />
           <BoxText />
         </div>
